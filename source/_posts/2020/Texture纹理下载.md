@@ -86,9 +86,9 @@ int dumpTextureToBmp(int textureId, int txtWidth, int txtHeight, char *dumpFileP
 
     // check
     int status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
-    if (status != GL_FRAMEBUFFER_COMPLETE)   //　error:  GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT
+    if (status != GL_NONE)
     {
-        SRLOGE(SVIDEO_RENDER_TAG, "cqd, glCheckFramebufferStatus, status = " + status);
+        LOGE("cqd, glCheckFramebufferStatus, status = %d", status);
         return -1;
     }
 
