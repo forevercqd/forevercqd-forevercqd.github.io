@@ -16,10 +16,21 @@ tags:
 ffmpeg -y -f s16le -ac 1 -ar 44100 -acodec pcm_s16le -i test.pcm -ar 48000 -f s16le out.pcm
 ```
 
-## 播放yuv
+## 播放视频裸数据：
+
+ffplay -f 格式 -pixel_format 表示格式 -s 宽高 文件路径
+
+
+* 播放YUV420P格式的视频帧（其实就是一张图像）
 ```
-ffplay -pix_fmt nv12 -video_size 480x640 VTDecompressionOutputCallback_281_480x640.yuv
+ffplay -f rawvideo -pixel_format yuv420p -s 480*480 ~/Desktop/texture.yuv
 ```
+
+* 播放rgb视频帧：
+```
+ffplay -f rawvideo -pixel_format rgb24 -s 480*480 ~/Desktop/texture.rgb
+```
+
 
 ## 安装 ffmpeg, ffprobe, ffplay.
 brew install ffmpeg --with-ffplay
