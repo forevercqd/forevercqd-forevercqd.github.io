@@ -21,7 +21,11 @@ git clone https://github.com/forevercqd/hexo-theme-huweihuang.git
 hexo g
 hexo s
 ```
-建议：在使用 hexo g 部署之后，可以先使用 hexo s 运行本地站点，然后在浏览器输入地址 http://lacolhost:4000/ 查看运行结果，检查无误后再使用 hexo d 发布
+建议：在使用 hexo g 部署之后，可以先使用 hexo s 运行本地站点，然后在浏览器输入地址 http://lacolhost:4000/ 查看运行结果，
+检查无误后再使用 hexo d 发布
+```
+hexo d
+```
 
 
 ## 新建文章
