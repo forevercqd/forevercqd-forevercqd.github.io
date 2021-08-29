@@ -44,4 +44,5 @@ static pthread_id_t getCurTid() {
 #else
     return gettid();
 #endif
+
 }
